@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mishka Singh — Electrical & Computer Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg class="circuit-bg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M0 45 H90 M45 0 V90" stroke="#c6813c" stroke-width="0.6"/>
+      <circle cx="45" cy="45" r="2" fill="#6fe7c6"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+</svg>
+
+<nav>
+  <a href="index.html" class="nav-mark"><span class="dot"></span> M. SINGH <span style="color:var(--muted-2); font-weight:400;">// ECE</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="active">home</a>
+    <a href="experience.html">experience</a>
+    <a href="cluster.html">cluster&nbsp;build</a>
+    <a href="education.html">education</a>
+    <a href="skills.html">skills</a>
+    <a href="contact.html">contact</a>
+  </div>
+  <button id="menuBtn">menu</button>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="kicker">Cape Town, South Africa</div>
+        <h1>Building the<br><span class="accent">infrastructure</span><br>behind ideas.</h1>
+        <p>I'm Mishka — a 3rd-year Electrical & Computer Engineering student at the University of Cape Town. I spend my time somewhere between circuit diagrams and cluster racks, and I'm happiest when a design I've drawn on a screen turns into something that actually runs. When I'm not in a lab, I'm usually on a mountain trail.</p>
+        <div class="hero-cta">
+          <a href="experience.html" class="btn btn-primary">See my work →</a>
+          <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="photo-frame">
+        <div class="inner">
+          <img id="profilePhoto" src="assets/profile.jpg" alt="Mishka Singh">
+          <div class="photo-placeholder" id="photoPlaceholder" style="display:none;">
+            <div class="icon">◎</div>
+            Add your photo<br>
+            <span style="color:var(--muted-2);">save it as <b style="color:var(--text);">assets/profile.jpg</b></span>
+          </div>
+        </div>
+        <div class="tag-corner">Mishka Singh</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="eyebrow">About</div>
+    <div class="about-grid">
+      <div>
+        <h2>An engineer who reads the room and the datasheet.</h2>
+        <p>I'm drawn to the parts of engineering that sit between hardware and people — designing a system is one thing, but getting a team to build it under pressure, on a deadline, is the part I find most rewarding.</p>
+        <p>I hope to use what I'm learning at UCT to give back to the country I call home. I like learning new things, testing what I can actually do under pressure, and I have a genuine soft spot for anything with a plug, a processor, or a trail map.</p>
+      </div>
+      <div class="fact-panel">
+        <div class="fact-row"><span class="k">Studying</span><span class="v">BSc Electrical & Computer Engineering</span></div>
+        <div class="fact-row"><span class="k">Institution</span><span class="v">University of Cape Town</span></div>
+        <div class="fact-row"><span class="k">Year</span><span class="v">3rd Year (Feb 2023 – current)</span></div>
+        <div class="fact-row"><span class="k">Standing</span><span class="v">Dean's List</span></div>
+        <div class="fact-row"><span class="k">Tools</span><span class="v">KiCad · SolidWorks · LTSpice</span></div>
+        <div class="fact-row"><span class="k">Languages</span><span class="v">Python, Java</span></div>
+        <div class="fact-row"><span class="k">Based in</span><span class="v">Cape Town, South Africa</span></div>
+      </div>
+    </div>
+
+    <div class="carousel-section">
+      <div class="carousel-headline">
+        <div>
+          <div class="eyebrow" style="margin-bottom:8px;">Snapshots</div>
+          <h2>A few moments along the way</h2>
+        </div>
+        <p>From the competition floor to a mountain trail — swap these in with your own photos any time.</p>
+      </div>
+
+      <div class="carousel" id="carousel">
+        <div class="carousel-track">
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img class="carousel-img" src="assets/gallery/1.jpg" alt="Team EEElite at the CHPC National Round">
+              <div class="carousel-placeholder"><span class="icon">◎</span>Add assets/gallery/1.jpg</div>
+            </div>
+            <div class="carousel-caption">
+              <span class="title">Team EEElite — CHPC National Round</span>
+              <span class="tag">Dec 2024</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img class="carousel-img" src="assets/gallery/2.jpg" alt="Assembling the 3-node cluster">
+              <div class="carousel-placeholder"><span class="icon">◎</span>Add assets/gallery/2.jpg</div>
+            </div>
+            <div class="carousel-caption">
+              <span class="title">Building the cluster from bare metal</span>
+              <span class="tag">Competition floor</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img class="carousel-img" src="assets/gallery/3.jpg" alt="Presenting the design to the judging panel">
+              <div class="carousel-placeholder"><span class="icon">◎</span>Add assets/gallery/3.jpg</div>
+            </div>
+            <div class="carousel-caption">
+              <span class="title">Presenting our design to the judges</span>
+              <span class="tag">Selection round</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img class="carousel-img" src="assets/gallery/4.jpg" alt="On site at Henry Fagan">
+              <div class="carousel-placeholder"><span class="icon">◎</span>Add assets/gallery/4.jpg</div>
+            </div>
+            <div class="carousel-caption">
+              <span class="title">On-site checks at Henry Fagan</span>
+              <span class="tag">Nov – Dec 2023</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img class="carousel-img" src="assets/gallery/5.jpg" alt="UCT Hiking Club on Table Mountain">
+              <div class="carousel-placeholder"><span class="icon">◎</span>Add assets/gallery/5.jpg</div>
+            </div>
+            <div class="carousel-caption">
+              <span class="title">UCT Hiking Club, up the mountain</span>
+              <span class="tag">Weekends</span>
+            </div>
+          </div>
+
+        </div>
+        <button class="car-btn prev" aria-label="Previous slide">‹</button>
+        <button class="car-btn next" aria-label="Next slide">›</button>
+        <div class="car-dots"></div>
+      </div>
+    </div>
+
+    <div class="quicklinks">
+      <a href="experience.html" class="qcard">
+        <div class="qnum">01 · Experience</div>
+        <h4>Internships & Competitions</h4>
+        <p>CHPC Cluster Competition, Henry Fagan internship, IEEE GlobeCom.</p>
+      </a>
+      <a href="cluster.html" class="qcard">
+        <div class="qnum">02 · Artefact</div>
+        <h4>The Cluster Build</h4>
+        <p>A deep dive into the HPC cluster I helped design, build and benchmark.</p>
+      </a>
+      <a href="education.html" class="qcard">
+        <div class="qnum">03 · Education</div>
+        <h4>Academic Record</h4>
+        <p>UCT coursework, Dean's List standing, and school achievements.</p>
+      </a>
+      <a href="skills.html" class="qcard">
+        <div class="qnum">04 · Skills</div>
+        <h4>Tools & Strengths</h4>
+        <p>CAD, code, systems administration, and the softer skills alongside them.</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="site-footer-links">
+    <a href="experience.html">Experience</a>
+    <a href="cluster.html">Cluster Build</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="foot-fine">Mishka Singh · Electrical & Computer Engineering · University of Cape Town</div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

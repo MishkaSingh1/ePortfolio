@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cluster Build — Mishka Singh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg class="circuit-bg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M0 45 H90 M45 0 V90" stroke="#c6813c" stroke-width="0.6"/>
+      <circle cx="45" cy="45" r="2" fill="#6fe7c6"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+</svg>
+
+<nav>
+  <a href="index.html" class="nav-mark"><span class="dot"></span> M. SINGH <span style="color:var(--muted-2); font-weight:400;">// ECE</span></a>
+  <div class="nav-links">
+    <a href="index.html">home</a>
+    <a href="experience.html">experience</a>
+    <a href="cluster.html" class="active">cluster&nbsp;build</a>
+    <a href="education.html">education</a>
+    <a href="skills.html">skills</a>
+    <a href="contact.html">contact</a>
+  </div>
+  <button id="menuBtn">menu</button>
+</nav>
+
+<main>
+  <div class="page-head">
+    <div class="eyebrow">Artefact Spotlight</div>
+    <h1 class="page-title">Designing a HPC cluster on a fixed budget.</h1>
+    <p class="page-sub">The CHPC national round gave every team a budget, a parts list, and five days. My part covered hardware selection, low-level Linux setup, and secure remote access — the layer that let four of us actually run the thing together.</p>
+  </div>
+
+  <section style="padding-top:0;">
+    <div class="node-visual" style="margin-bottom:40px;">
+      <svg class="node-diagram" viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;">
+        <path class="trace" d="M230 60 L120 170" />
+        <path class="trace alt" d="M230 60 L340 170" />
+        <path class="trace" d="M120 170 L120 250" />
+        <path class="trace alt" d="M340 170 L340 250" />
+        <path class="trace" d="M120 170 L340 170" opacity="0.35" />
+        <g class="node head">
+          <circle class="pulse" cx="230" cy="60" r="32"/>
+          <text x="230" y="56">HEAD</text>
+          <text x="230" y="70" fill="#5f6b65">node.0</text>
+        </g>
+        <g class="node">
+          <circle cx="120" cy="170" r="28"/>
+          <text x="120" y="166">COMPUTE</text>
+          <text x="120" y="180" fill="#5f6b65">node.1</text>
+        </g>
+        <g class="node">
+          <circle cx="340" cy="170" r="28"/>
+          <text x="340" y="166">COMPUTE</text>
+          <text x="340" y="180" fill="#5f6b65">node.2</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="spotlight">
+      <div class="spot-grid">
+        <div>
+          <h3>What I owned on the team</h3>
+          <p style="color:var(--muted);">Hardware selection under budget, cluster assembly from bare metal, low-level Linux networking (static IPs, NFS shared home directory), and configuring ZeroTier so the whole team had secure SSH access into the cluster from our own laptops — without opening ports on the head node's public firewall.</p>
+          <p style="color:var(--muted);">I also owned the MATLAB Monte Carlo Pi benchmark: installing MATLAB and the Parallel Computing Toolbox across every node via the shared NFS directory, then tuning <code style="font-family:'IBM Plex Mono'; color:var(--signal);">parfor</code> loops and parpool configurations (threads vs. processes vs. local) to get the best throughput for our core count.</p>
+          <div class="stat-grid">
+            <div class="stat"><span class="num">R400k</span><span class="lbl">Hardware budget</span></div>
+            <div class="stat"><span class="num">3</span><span class="lbl">Nodes assembled</span></div>
+            <div class="stat"><span class="num">4th</span><span class="lbl">National placing</span></div>
+            <div class="stat"><span class="num">7</span><span class="lbl">Benchmarks run</span></div>
+          </div>
+          <div style="margin-top:30px;">
+            <a href="SNGMIS005_MISHKA_SINGH_3000.pdf" target="_blank" class="btn btn-primary">Read the full report (PDF) →</a>
+          </div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-title">Cluster spec sheet</div>
+          <div class="row"><span>Head node</span><b>HPE DL20 Gen11</b></div>
+          <div class="row"><span>CPU</span><b>Xeon E-2436, 6c/12t</b></div>
+          <div class="row"><span>Compute nodes</span><b>2× HPE DL360 Gen11</b></div>
+          <div class="row"><span>CPU (each)</span><b>2× Xeon Silver 4510</b></div>
+          <div class="row"><span>Networking</span><b>Aruba CX 6100, 10G SFP+</b></div>
+          <div class="row"><span>OS</span><b>Rocky Linux 9.4</b></div>
+          <div class="row"><span>Remote access</span><b>ZeroTier + SSH</b></div>
+          <div class="row"><span>My benchmark</span><b>MATLAB Monte Carlo π</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:60px;">
+      <div class="eyebrow">Benchmarks run on the floor</div>
+      <div class="chip-wrap">
+        <span class="chip">HPCC</span>
+        <span class="chip">HPCG</span>
+        <span class="chip">MILC</span>
+        <span class="chip">MATLAB Coding Challenge</span>
+        <span class="chip">LAMMPS</span>
+        <span class="chip">NWChem</span>
+        <span class="chip">PennyLane</span>
+      </div>
+    </div>
+
+    <div style="margin-top:60px;">
+      <div class="eyebrow">Reflection</div>
+      <p style="color:var(--muted); max-width:760px;">This project drew directly on coursework in networking, computer architecture, and parallel computing — but the bigger lesson was leadership. As team captain, I learned to delegate and check in across four workstreams at once so every benchmark kept moving under a five-day clock. It's the closest I've come to the real trade-offs of taking a design from a budget spreadsheet through to a working, benchmarked system.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="foot-fine">Mishka Singh · Electrical & Computer Engineering · University of Cape Town</div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

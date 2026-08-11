@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Mishka Singh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg class="circuit-bg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M0 45 H90 M45 0 V90" stroke="#c6813c" stroke-width="0.6"/>
+      <circle cx="45" cy="45" r="2" fill="#6fe7c6"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+</svg>
+
+<nav>
+  <a href="index.html" class="nav-mark"><span class="dot"></span> M. SINGH <span style="color:var(--muted-2); font-weight:400;">// ECE</span></a>
+  <div class="nav-links">
+    <a href="index.html">home</a>
+    <a href="experience.html">experience</a>
+    <a href="cluster.html">cluster&nbsp;build</a>
+    <a href="education.html">education</a>
+    <a href="skills.html" class="active">skills</a>
+    <a href="contact.html">contact</a>
+  </div>
+  <button id="menuBtn">menu</button>
+</nav>
+
+<main>
+  <div class="page-head">
+    <div class="eyebrow">Skills</div>
+    <h1 class="page-title">Tools, code, and the softer skills alongside them.</h1>
+    <p class="page-sub">A working toolkit built across coursework, competitions, and an internship — plus the collaborative habits that make the technical side actually land.</p>
+  </div>
+
+  <section style="padding-top:0;">
+    <div class="skills-wrap">
+      <div class="skill-col">
+        <h4>Design & CAD</h4>
+        <div class="skill-bar"><div class="lbl"><span>KiCad</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-bar"><div class="lbl"><span>AutoCAD</span></div><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
+        <div class="skill-bar"><div class="lbl"><span>SolidWorks</span></div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div></div>
+        <div class="skill-bar"><div class="lbl"><span>LTSpice</span></div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div></div>
+      </div>
+      <div class="skill-col">
+        <h4>Systems & Code</h4>
+        <div class="skill-bar"><div class="lbl"><span>Linux (Rocky/CLI)</span></div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+        <div class="skill-bar"><div class="lbl"><span>Python</span></div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
+        <div class="skill-bar"><div class="lbl"><span>Java</span></div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+        <div class="skill-bar"><div class="lbl"><span>MATLAB</span></div><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
+      </div>
+      <div class="skill-col">
+        <h4>Tools & Practice</h4>
+        <div class="chip-wrap">
+          <span class="chip">Git & GitHub</span>
+          <span class="chip">ZeroTier</span>
+          <span class="chip">Relux</span>
+          <span class="chip">Microsoft Suite</span>
+          <span class="chip">Team Leadership</span>
+          <span class="chip">Written Communication</span>
+          <span class="chip">Public Speaking</span>
+          <span class="chip">Mentoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <section style="padding:0 5vw;">
+      <div class="strip-grid">
+        <div>
+          <div class="eyebrow">Beyond the lab</div>
+          <h3 style="font-size:1.6rem; margin-bottom:16px;">Academic mentor. Regular hiker.</h3>
+          <p>I mentor students across UCT's Engineering & the Built Environment faculty, and I'm a regular with the UCT Hiking Club — most weekends you'll find me on a trail somewhere around the peninsula, which is usually where my best debugging ideas show up.</p>
+        </div>
+        <svg class="mountain-art" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="0,200 90,90 150,150 230,50 300,140 360,80 430,160 500,110 500,220 0,220"
+            fill="none" stroke="#6fe7c6" stroke-width="1.4" opacity="0.8"/>
+          <polyline points="0,210 110,130 190,175 260,100 330,165 420,120 500,150"
+            fill="none" stroke="#c6813c" stroke-width="1.4" opacity="0.55"/>
+          <circle cx="230" cy="50" r="3" fill="#e0a35c"/>
+        </svg>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="cluster.html">Cluster Build</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="foot-fine">Mishka Singh · Electrical & Computer Engineering · University of Cape Town</div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
