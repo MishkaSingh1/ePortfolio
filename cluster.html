@@ -34,7 +34,6 @@
 
 <main>
   <div class="page-head">
-    <div class="eyebrow">Artefact Spotlight</div>
     <h1 class="page-title">Designing a HPC cluster on a fixed budget.</h1>
     <p class="page-sub">A two-stage national competition: a selection round designing a cluster on paper (and in the cloud), then five days on the competition floor turning a R400,000 budget into a working, benchmarked cluster. My part covered hardware selection, low-level Linux setup, and secure remote access — the layer that let four of us actually run the thing together.</p>
   </div>
@@ -77,14 +76,9 @@
           <p style="color:var(--muted);">Hardware selection under budget, then physically assembling the 3-node cluster from bare metal on delivery day — connecting nodes through an Aruba switch and installing Rocky Linux 9.4 on each from a USB image. From there I handled the low-level system configuration: static IP addressing with a shared gateway and DNS, NFS to export <code style="font-family:'IBM Plex Mono'; color:var(--signal);">/home</code> from the head node so user files and binaries were available cluster-wide, and configuring ZeroTier as our secure remote-access layer.</p>
           <p style="color:var(--muted);">For ZeroTier, I set the head node up as the controlling point: created a private network, joined the head node and every teammate's laptop to it, authorised each device from the network controller, and assigned it an address on our private subnet. That gave the whole team SSH access into the head node — and from there the compute nodes — from our own laptops, without opening ports on the head node's public-facing firewall.</p>
           <p style="color:var(--muted);">I also owned the MATLAB Monte Carlo Pi benchmark: installing MATLAB and the Parallel Computing Toolbox across every node via the shared NFS directory (so the install only had to happen once), then tuning <code style="font-family:'IBM Plex Mono'; color:var(--signal);">parfor</code> loops and parpool configurations (threads vs. processes vs. local) and chunk size to lift sample throughput above the default single-threaded baseline.</p>
-          <div class="stat-grid">
-            <div class="stat"><span class="num">R400k</span><span class="lbl">Hardware budget</span></div>
-            <div class="stat"><span class="num">3</span><span class="lbl">Nodes assembled</span></div>
-            <div class="stat"><span class="num">4th</span><span class="lbl">National placing</span></div>
-            <div class="stat"><span class="num">7</span><span class="lbl">Benchmarks run</span></div>
-          </div>
+          <p class="meta-line">R400,000 hardware budget · 3 nodes assembled · 4th nationally · 7 benchmarks run</p>
           <div style="margin-top:30px;">
-            <a href="SNGMIS005_MISHKA_SINGH_3000.pdf" target="_blank" class="btn btn-primary">Read the full report (PDF) →</a>
+            <a href="SNGMIS005_MISHKA_SINGH_3000.pdf" target="_blank" class="btn btn-primary">Read the full report (PDF)</a>
           </div>
         </div>
         <div class="spec-card">
