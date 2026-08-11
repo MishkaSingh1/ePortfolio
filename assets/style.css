@@ -192,6 +192,11 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .t-item ul{color:var(--muted); padding-left:20px; margin-bottom:12px;}
 .t-item li{margin-bottom:7px;}
 .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+
+.exp-item{margin-bottom:44px;}
+.exp-item p{max-width:640px;}
+.exp-more{margin-top:18px;}
+.exp-more .btn{padding:9px 20px; font-size:0.85rem;}
 .tag{font-family:'JetBrains Mono'; font-size:0.72rem; padding:5px 11px; border:1px solid var(--line); border-radius:20px; color:var(--muted); background:#fff;}
 
 /* ---------- spotlight / artefact ---------- */
