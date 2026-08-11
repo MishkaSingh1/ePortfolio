@@ -36,7 +36,7 @@
   <div class="page-head">
     <div class="eyebrow">Artefact Spotlight</div>
     <h1 class="page-title">Designing a HPC cluster on a fixed budget.</h1>
-    <p class="page-sub">The CHPC national round gave every team a budget, a parts list, and five days. My part covered hardware selection, low-level Linux setup, and secure remote access — the layer that let four of us actually run the thing together.</p>
+    <p class="page-sub">A two-stage national competition: a selection round designing a cluster on paper (and in the cloud), then five days on the competition floor turning a R400,000 budget into a working, benchmarked cluster. My part covered hardware selection, low-level Linux setup, and secure remote access — the layer that let four of us actually run the thing together.</p>
   </div>
 
   <section style="padding-top:0;">
@@ -65,12 +65,18 @@
       </svg>
     </div>
 
+    <div style="margin-bottom:60px;">
+      <div class="eyebrow">Getting there: pre-round & selection round</div>
+      <p style="color:var(--muted); max-width:760px; margin-top:14px;">Before the national round, our pre-round project had us stand up a cluster on Microsoft Azure and write up our own GitHub repository of set-up instructions for future competition participants. The selection round that followed was a week-long exercise: in teams of four, we learned the fundamentals of HPC, then designed a cluster optimised for a specific workload (MLPerf) — choosing CPU, GPU and storage specifications — stood it up virtually as a 3-node OpenStack cluster on Rocky Linux 9.3, and operated it remotely over Windows PowerShell. We closed the round by presenting our design to a panel of judges.</p>
+    </div>
+
     <div class="spotlight">
       <div class="spot-grid">
         <div>
-          <h3>What I owned on the team</h3>
-          <p style="color:var(--muted);">Hardware selection under budget, cluster assembly from bare metal, low-level Linux networking (static IPs, NFS shared home directory), and configuring ZeroTier so the whole team had secure SSH access into the cluster from our own laptops — without opening ports on the head node's public firewall.</p>
-          <p style="color:var(--muted);">I also owned the MATLAB Monte Carlo Pi benchmark: installing MATLAB and the Parallel Computing Toolbox across every node via the shared NFS directory, then tuning <code style="font-family:'IBM Plex Mono'; color:var(--signal);">parfor</code> loops and parpool configurations (threads vs. processes vs. local) to get the best throughput for our core count.</p>
+          <h3>National round — what I owned on the team</h3>
+          <p style="color:var(--muted);">Hardware selection under budget, then physically assembling the 3-node cluster from bare metal on delivery day — connecting nodes through an Aruba switch and installing Rocky Linux 9.4 on each from a USB image. From there I handled the low-level system configuration: static IP addressing with a shared gateway and DNS, NFS to export <code style="font-family:'IBM Plex Mono'; color:var(--signal);">/home</code> from the head node so user files and binaries were available cluster-wide, and configuring ZeroTier as our secure remote-access layer.</p>
+          <p style="color:var(--muted);">For ZeroTier, I set the head node up as the controlling point: created a private network, joined the head node and every teammate's laptop to it, authorised each device from the network controller, and assigned it an address on our private subnet. That gave the whole team SSH access into the head node — and from there the compute nodes — from our own laptops, without opening ports on the head node's public-facing firewall.</p>
+          <p style="color:var(--muted);">I also owned the MATLAB Monte Carlo Pi benchmark: installing MATLAB and the Parallel Computing Toolbox across every node via the shared NFS directory (so the install only had to happen once), then tuning <code style="font-family:'IBM Plex Mono'; color:var(--signal);">parfor</code> loops and parpool configurations (threads vs. processes vs. local) and chunk size to lift sample throughput above the default single-threaded baseline.</p>
           <div class="stat-grid">
             <div class="stat"><span class="num">R400k</span><span class="lbl">Hardware budget</span></div>
             <div class="stat"><span class="num">3</span><span class="lbl">Nodes assembled</span></div>
@@ -110,7 +116,7 @@
 
     <div style="margin-top:60px;">
       <div class="eyebrow">Reflection</div>
-      <p style="color:var(--muted); max-width:760px;">This project drew directly on coursework in networking, computer architecture, and parallel computing — but the bigger lesson was leadership. As team captain, I learned to delegate and check in across four workstreams at once so every benchmark kept moving under a five-day clock. It's the closest I've come to the real trade-offs of taking a design from a budget spreadsheet through to a working, benchmarked system.</p>
+      <p style="color:var(--muted); max-width:760px;">This project drew directly on coursework in networking, computer architecture, and parallel/distributed computing — but the bigger lesson was leadership. As team captain, I learned to delegate and check in across four workstreams at once so every benchmark kept moving under a five-day clock. It gave me a real anchor for the professionalism courses at UCT — turning principles I'd only read about into something I could see the necessity of first-hand — and it's the closest I've come to the real trade-offs of taking a design from a budget spreadsheet through to a working, benchmarked system.</p>
     </div>
   </section>
 </main>

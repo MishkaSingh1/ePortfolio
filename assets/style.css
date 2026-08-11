@@ -227,6 +227,8 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .edu-card h3{font-size:1.3rem; margin-bottom:4px;}
 .edu-card .sub{color:var(--muted-2); font-family:'JetBrains Mono'; font-size:0.82rem; margin-bottom:18px;}
 .edu-card ul{padding-left:18px; color:var(--muted);}
+.detail-list{padding-left:20px; color:var(--muted); margin-bottom:12px;}
+.detail-list li{margin-bottom:7px;}
 .edu-card li{margin-bottom:8px;}
 
 /* ---------- skills ---------- */
