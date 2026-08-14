@@ -44,7 +44,7 @@ nav{
 }
 .nav-mark{display:flex; align-items:center; gap:10px; font-family:'Fraunces'; font-weight:600; font-size:1.1rem; text-decoration:none;}
 .nav-mark .dot{width:8px; height:8px; border-radius:50%; background:var(--signal); box-shadow:0 0 8px rgba(165,47,38,0.5);}
-.nav-links{display:flex; gap:30px; font-size:0.85rem; font-family:'JetBrains Mono'; color:var(--muted); align-items:center;}
+.nav-links{display:flex; gap:30px; font-size:0.95rem; font-family:'Fraunces'; color:var(--muted); align-items:center;}
 .nav-links a{text-decoration:none; transition:color .2s; position:relative; padding-bottom:2px;}
 .nav-links a:hover, .nav-links a:focus-visible{color:var(--copper);}
 .nav-links a.active{color:var(--signal);}
