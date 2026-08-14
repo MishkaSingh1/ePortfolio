@@ -19,15 +19,19 @@ body{
   font-family:'Inter', sans-serif;
   line-height:1.65;
   overflow-x:hidden;
+  position:relative;
 }
-h1,h2,h3,h4{font-family:'Oswald', sans-serif; font-weight:600; letter-spacing:0.005em;}
+body::before{
+  content:'';
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:radial-gradient(rgba(43,33,29,0.05) 1px, transparent 1px);
+  background-size:4px 4px;
+}
+h1,h2,h3,h4{font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em;}
 .mono{font-family:'JetBrains Mono', monospace;}
 a{color:inherit;}
 img{max-width:100%; display:block;}
 ::selection{background:var(--copper); color:#fff;}
-
-/* background circuit texture — reads as faint blueprint grid on white */
-.circuit-bg{position:fixed; inset:0; z-index:0; opacity:0.09; pointer-events:none;}
 
 /* ---------- nav ---------- */
 nav{
@@ -38,7 +42,7 @@ nav{
   background:rgba(251,239,228,0.82);
   border-bottom:1px solid var(--line);
 }
-.nav-mark{display:flex; align-items:center; gap:10px; font-family:'Oswald'; font-weight:600; font-size:1.05rem; text-decoration:none;}
+.nav-mark{display:flex; align-items:center; gap:10px; font-family:'Fraunces'; font-weight:600; font-size:1.1rem; text-decoration:none;}
 .nav-mark .dot{width:8px; height:8px; border-radius:50%; background:var(--signal); box-shadow:0 0 8px rgba(165,47,38,0.5);}
 .nav-links{display:flex; gap:30px; font-size:0.85rem; font-family:'JetBrains Mono'; color:var(--muted); align-items:center;}
 .nav-links a{text-decoration:none; transition:color .2s; position:relative; padding-bottom:2px;}
@@ -65,7 +69,7 @@ main{position:relative; z-index:1;}
 section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .page-head{padding:150px 5vw 40px; max-width:1200px; margin:0 auto;}
 .eyebrow{
-  font-family:'Oswald', sans-serif; font-weight:500; font-size:1.15rem;
+  font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:1.2rem;
   color:var(--copper); margin-bottom:14px;
 }
 .page-title{font-size:clamp(2rem, 4vw, 3rem); margin-bottom:14px;}
@@ -92,7 +96,7 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .hero-kicker{font-family:'JetBrains Mono'; color:var(--copper); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;}
 .hero-headline{font-size:clamp(2.4rem, 6.2vw, 4.6rem); line-height:1.05; max-width:900px;}
 .hero-headline .accent{color:var(--copper);}
-.hero-lower{display:grid; grid-template-columns:1fr 300px; gap:50px; align-items:start; margin-top:54px;}
+.hero-lower{display:grid; grid-template-columns:300px 1fr; gap:50px; align-items:start; margin-top:54px;}
 .hero-copy p{color:var(--muted); font-size:1.06rem; max-width:520px; margin-bottom:30px;}
 .hero-cta{display:flex; gap:16px; flex-wrap:wrap;}
 
