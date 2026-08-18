@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cluster Build — Mishka Singh</title>
+<title>Cluster Build â€” Mishka Singh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -14,12 +14,12 @@
 <nav>
   <a href="index.html" class="nav-mark"><span class="dot"></span> MISHKA SINGH <span style="color:var(--muted-2); font-weight:400;">// ECE</span></a>
   <div class="nav-links">
-    <a href="index.html">home</a>
-    <a href="experience.html" class="active">experience</a>
-    <a href="projects.html">projects</a>
-    <a href="education.html">education</a>
-    <a href="skills.html">skills</a>
-    <a href="contact.html">contact</a>
+    <a href="index.html">HOME</a>
+    <a href="experience.html" class="active">EXPERIENCE</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="skills.html">SKILLS</a>
+    <a href="contact.html">CONTACT</a>
   </div>
   <button id="menuBtn">menu</button>
 </nav>
@@ -27,7 +27,7 @@
 <main>
   <div class="page-head">
     <h1 class="page-title">Designing a HPC cluster on a fixed budget.</h1>
-    <p class="page-sub">A two-stage national competition: a selection round designing a cluster on paper (and in the cloud), then five days on the competition floor turning a R400,000 budget into a working, benchmarked cluster. My part covered hardware selection, low-level Linux setup, and secure remote access — the layer that let four of us actually run the thing together.</p>
+    <p class="page-sub">A two-stage national competition: a selection round designing a cluster on paper (and in the cloud), then five days on the competition floor turning a R400,000 budget into a working, benchmarked cluster. My part covered hardware selection, low-level Linux setup, and secure remote access â€” the layer that let four of us actually run the thing together.</p>
   </div>
 
   <section style="padding-top:0;">
@@ -58,17 +58,17 @@
 
     <div class="block">
       <div class="eyebrow">Getting there: pre-round & selection round</div>
-      <p style="color:var(--muted); max-width:760px;">Before the national round, our pre-round project had us stand up a cluster on Microsoft Azure and write up our own GitHub repository of set-up instructions for future competition participants. The selection round that followed was a week-long exercise: in teams of four, we learned the fundamentals of HPC, then designed a cluster optimised for a specific workload (MLPerf) — choosing CPU, GPU and storage specifications — stood it up virtually as a 3-node OpenStack cluster on Rocky Linux 9.3, and operated it remotely over Windows PowerShell. We closed the round by presenting our design to a panel of judges.</p>
+      <p style="color:var(--muted); max-width:760px;">Before the national round, our pre-round project had us stand up a cluster on Microsoft Azure and write up our own GitHub repository of set-up instructions for future competition participants. The selection round that followed was a week-long exercise: in teams of four, we learned the fundamentals of HPC, then designed a cluster optimised for a specific workload (MLPerf) â€” choosing CPU, GPU and storage specifications â€” stood it up virtually as a 3-node OpenStack cluster on Rocky Linux 9.3, and operated it remotely over Windows PowerShell. We closed the round by presenting our design to a panel of judges.</p>
     </div>
 
     <div class="spotlight">
       <div class="spot-grid">
         <div>
-          <h3>National round — what I owned on the team</h3>
-          <p style="color:var(--muted);">Hardware selection under budget, then physically assembling the 3-node cluster from bare metal on delivery day — connecting nodes through an Aruba switch and installing Rocky Linux 9.4 on each from a USB image. From there I handled the low-level system configuration: static IP addressing with a shared gateway and DNS, NFS to export <code style="font-family:'IBM Plex Mono'; color:var(--signal);">/home</code> from the head node so user files and binaries were available cluster-wide, and configuring ZeroTier as our secure remote-access layer.</p>
-          <p style="color:var(--muted);">For ZeroTier, I set the head node up as the controlling point: created a private network, joined the head node and every teammate's laptop to it, authorised each device from the network controller, and assigned it an address on our private subnet. That gave the whole team SSH access into the head node — and from there the compute nodes — from our own laptops, without opening ports on the head node's public-facing firewall.</p>
+          <h3>National round â€” what I owned on the team</h3>
+          <p style="color:var(--muted);">Hardware selection under budget, then physically assembling the 3-node cluster from bare metal on delivery day â€” connecting nodes through an Aruba switch and installing Rocky Linux 9.4 on each from a USB image. From there I handled the low-level system configuration: static IP addressing with a shared gateway and DNS, NFS to export <code style="font-family:'IBM Plex Mono'; color:var(--signal);">/home</code> from the head node so user files and binaries were available cluster-wide, and configuring ZeroTier as our secure remote-access layer.</p>
+          <p style="color:var(--muted);">For ZeroTier, I set the head node up as the controlling point: created a private network, joined the head node and every teammate's laptop to it, authorised each device from the network controller, and assigned it an address on our private subnet. That gave the whole team SSH access into the head node â€” and from there the compute nodes â€” from our own laptops, without opening ports on the head node's public-facing firewall.</p>
           <p style="color:var(--muted);">I also owned the MATLAB Monte Carlo Pi benchmark: installing MATLAB and the Parallel Computing Toolbox across every node via the shared NFS directory (so the install only had to happen once), then tuning <code style="font-family:'IBM Plex Mono'; color:var(--signal);">parfor</code> loops and parpool configurations (threads vs. processes vs. local) and chunk size to lift sample throughput above the default single-threaded baseline.</p>
-          <p class="meta-line">R400,000 hardware budget · 3 nodes assembled · 4th nationally · 7 benchmarks run</p>
+          <p class="meta-line">R400,000 hardware budget Â· 3 nodes assembled Â· 4th nationally Â· 7 benchmarks run</p>
           <div style="margin-top:30px;">
             <a href="SNGMIS005_MISHKA_SINGH_3000.pdf" target="_blank" class="btn btn-primary">Read the full report (PDF)</a>
           </div>
@@ -77,12 +77,12 @@
           <div class="spec-title">Cluster spec sheet</div>
           <div class="row"><span>Head node</span><b>HPE DL20 Gen11</b></div>
           <div class="row"><span>CPU</span><b>Xeon E-2436, 6c/12t</b></div>
-          <div class="row"><span>Compute nodes</span><b>2× HPE DL360 Gen11</b></div>
-          <div class="row"><span>CPU (each)</span><b>2× Xeon Silver 4510</b></div>
+          <div class="row"><span>Compute nodes</span><b>2Ã— HPE DL360 Gen11</b></div>
+          <div class="row"><span>CPU (each)</span><b>2Ã— Xeon Silver 4510</b></div>
           <div class="row"><span>Networking</span><b>Aruba CX 6100, 10G SFP+</b></div>
           <div class="row"><span>OS</span><b>Rocky Linux 9.4</b></div>
           <div class="row"><span>Remote access</span><b>ZeroTier + SSH</b></div>
-          <div class="row"><span>My benchmark</span><b>MATLAB Monte Carlo π</b></div>
+          <div class="row"><span>My benchmark</span><b>MATLAB Monte Carlo Ï€</b></div>
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@
 
     <div class="block">
       <div class="eyebrow">Reflection</div>
-      <p style="color:var(--muted); max-width:760px;">This project drew directly on coursework in networking, computer architecture, and parallel/distributed computing — but the bigger lesson was leadership. As team captain, I learned to delegate and check in across four workstreams at once so every benchmark kept moving under a five-day clock. It gave me a real anchor for the professionalism courses at UCT — turning principles I'd only read about into something I could see the necessity of first-hand — and it's the closest I've come to the real trade-offs of taking a design from a budget spreadsheet through to a working, benchmarked system.</p>
+      <p style="color:var(--muted); max-width:760px;">This project drew directly on coursework in networking, computer architecture, and parallel/distributed computing â€” but the bigger lesson was leadership. As team captain, I learned to delegate and check in across four workstreams at once so every benchmark kept moving under a five-day clock. It gave me a real anchor for the professionalism courses at UCT â€” turning principles I'd only read about into something I could see the necessity of first-hand â€” and it's the closest I've come to the real trade-offs of taking a design from a budget spreadsheet through to a working, benchmarked system.</p>
     </div>
   </section>
 </main>
@@ -127,7 +127,7 @@
     <a href="skills.html">Skills</a>
     <a href="contact.html">Contact</a>
   </div>
-  <div class="foot-fine">Mishka Singh · Electrical & Computer Engineering · University of Cape Town</div>
+  <div class="foot-fine">Mishka Singh Â· Electrical & Computer Engineering Â· University of Cape Town</div>
 </footer>
 
 <script src="assets/script.js"></script>
