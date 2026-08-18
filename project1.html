@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maze-Solving Robot â€” Mishka Singh</title>
+<title>Maze-Solving Robot — Mishka Singh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-mark"><span class="dot"></span> MISHKA SINGH <span style="color:var(--muted-2); font-weight:400;">// ECE</span></a>
+  <a href="index.html" class="nav-mark"><img src="assets/logo.png" class="nav-logo" alt="MS logo"> MISHKA SINGH <span style="color:var(--muted-2); font-weight:400;">// ECE</span></a>
   <div class="nav-links">
     <a href="index.html">HOME</a>
     <a href="experience.html">EXPERIENCE</a>
@@ -36,7 +37,7 @@
           <h3>What it was</h3>
           <p style="color:var(--muted);">The robot runs on a Stateflow state machine with states for straight motion, left/right turns, and reversing, switching between them based on wall-following sensor readings. I tested the logic in a MATLAB occupancy-grid simulation before running it on the physical robot in a maze built from MDF board and aluminium extrusion.</p>
           <ul class="detail-list">
-            <li>Designed the Stateflow logic â€” <code style="font-family:'JetBrains Mono';">SET_VARIABLES</code>, <code style="font-family:'JetBrains Mono';">STRAIGHT_MOTION</code>, <code style="font-family:'JetBrains Mono';">LEFT_TURN</code>, <code style="font-family:'JetBrains Mono';">RIGHT_TURN</code> and <code style="font-family:'JetBrains Mono';">REVERSE_MOTION</code> states, with sensor thresholds driving the transitions.</li>
+            <li>Designed the Stateflow logic — <code style="font-family:'JetBrains Mono';">SET_VARIABLES</code>, <code style="font-family:'JetBrains Mono';">STRAIGHT_MOTION</code>, <code style="font-family:'JetBrains Mono';">LEFT_TURN</code>, <code style="font-family:'JetBrains Mono';">RIGHT_TURN</code> and <code style="font-family:'JetBrains Mono';">REVERSE_MOTION</code> states, with sensor thresholds driving the transitions.</li>
             <li>Simulated the robot against a binary occupancy grid in MATLAB before testing on hardware.</li>
             <li>Ran the logic on the physical 4-wheel robot chassis and tuned it against the built maze.</li>
           </ul>
@@ -75,7 +76,7 @@
     <a href="skills.html">Skills</a>
     <a href="contact.html">Contact</a>
   </div>
-  <div class="foot-fine">Mishka Singh Â· Electrical & Computer Engineering Â· University of Cape Town</div>
+  <div class="foot-fine">Mishka Singh · Electrical & Computer Engineering · University of Cape Town</div>
 </footer>
 
 <script src="assets/script.js"></script>
