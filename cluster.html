@@ -26,6 +26,7 @@
 </nav>
 
 <main>
+  <div class="hero-ombre" aria-hidden="true"></div>
   <div class="page-head">
     <h1 class="page-title">Designing a HPC cluster on a fixed budget.</h1>
     <p class="page-sub">A two-stage national competition: a selection round designing a cluster on paper (and in the cloud), then five days on the competition floor turning a R400,000 budget into a working, benchmarked cluster. My part covered hardware selection, low-level Linux setup, and secure remote access — the layer that let four of us actually run the thing together.</p>
@@ -74,16 +75,16 @@
             <a href="SNGMIS005_MISHKA_SINGH_3000.pdf" target="_blank" class="btn btn-primary">Read the full report (PDF)</a>
           </div>
         </div>
-        <div class="spec-card">
-          <div class="spec-title">Cluster spec sheet</div>
-          <div class="row"><span>Head node</span><b>HPE DL20 Gen11</b></div>
-          <div class="row"><span>CPU</span><b>Xeon E-2436, 6c/12t</b></div>
-          <div class="row"><span>Compute nodes</span><b>2× HPE DL360 Gen11</b></div>
-          <div class="row"><span>CPU (each)</span><b>2× Xeon Silver 4510</b></div>
-          <div class="row"><span>Networking</span><b>Aruba CX 6100, 10G SFP+</b></div>
-          <div class="row"><span>OS</span><b>Rocky Linux 9.4</b></div>
-          <div class="row"><span>Remote access</span><b>ZeroTier + SSH</b></div>
-          <div class="row"><span>My benchmark</span><b>MATLAB Monte Carlo π</b></div>
+        <div class="info-card">
+          <div class="info-title">Cluster spec sheet</div>
+          <div class="info-fact"><span class="k">Head node</span><span class="v">HPE DL20 Gen11</span></div>
+          <div class="info-fact"><span class="k">CPU</span><span class="v">Xeon E-2436, 6c/12t</span></div>
+          <div class="info-fact"><span class="k">Compute nodes</span><span class="v">2× HPE DL360 Gen11</span></div>
+          <div class="info-fact"><span class="k">CPU (each)</span><span class="v">2× Xeon Silver 4510</span></div>
+          <div class="info-fact"><span class="k">Networking</span><span class="v">Aruba CX 6100, 10G SFP+</span></div>
+          <div class="info-fact"><span class="k">OS</span><span class="v">Rocky Linux 9.4</span></div>
+          <div class="info-fact"><span class="k">Remote access</span><span class="v">ZeroTier + SSH</span></div>
+          <div class="info-fact"><span class="k">My benchmark</span><span class="v">MATLAB Monte Carlo π</span></div>
         </div>
       </div>
     </div>

@@ -237,11 +237,11 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .spot-grid{display:grid; grid-template-columns:1.3fr 0.7fr; gap:50px; position:relative; z-index:1;}
 .spot-grid h3{font-size:1.7rem; margin-bottom:6px;}
 .meta-line{font-family:'JetBrains Mono'; font-size:0.82rem; color:var(--muted-2); margin-top:22px;}
-.spec-card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px; font-family:'JetBrains Mono'; font-size:0.82rem;}
-.spec-card .spec-title{color:var(--signal); margin-bottom:14px; text-transform:uppercase; letter-spacing:0.06em; font-size:0.72rem;}
-.spec-card div.row{display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed var(--line); color:var(--muted);}
-.spec-card div.row:last-child{border-bottom:none;}
-.spec-card div.row b{color:var(--text); font-weight:500;}
+.info-card{border-left:2px solid var(--copper); padding-left:26px; display:flex; flex-direction:column; gap:18px;}
+.info-title{font-family:'JetBrains Mono'; font-size:0.72rem; color:var(--signal); text-transform:uppercase; letter-spacing:0.06em;}
+.info-fact{display:flex; flex-direction:column; gap:3px;}
+.info-fact .k{font-family:'JetBrains Mono'; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--muted-2);}
+.info-fact .v{font-family:'Fraunces'; font-size:1.02rem; color:var(--text);}
 
 /* ---------- education ---------- */
 .edu-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:20px;}
@@ -257,10 +257,14 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 /* ---------- skills ---------- */
 .skills-wrap{display:grid; grid-template-columns:1fr 1fr 1fr; gap:26px; margin-top:20px;}
 .skill-col h4{font-family:'JetBrains Mono'; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--copper); margin-bottom:20px;}
-.skill-bar{margin-bottom:16px;}
-.skill-bar .lbl{display:flex; justify-content:space-between; font-size:0.88rem; margin-bottom:6px; color:var(--text);}
-.bar-track{height:5px; background:var(--line); border-radius:4px; overflow:hidden;}
-.bar-fill{height:100%; background:linear-gradient(90deg, var(--copper), var(--signal)); border-radius:4px;}
+.skill-circles{display:grid; grid-template-columns:1fr 1fr; gap:26px 10px;}
+.skill-circle{display:flex; flex-direction:column; align-items:center; text-align:center;}
+.ring-wrap{position:relative; width:84px; height:84px;}
+.circle-ring{width:100%; height:100%;}
+.circle-track{fill:none; stroke:var(--line); stroke-width:6;}
+.circle-fill{fill:none; stroke:var(--copper); stroke-width:6; stroke-linecap:round;}
+.circle-pct{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono'; font-size:0.8rem; color:var(--text);}
+.circle-label{margin-top:10px; font-size:0.85rem; color:var(--muted);}
 .chip-wrap{display:flex; flex-wrap:wrap; gap:9px;}
 .chip{font-family:'JetBrains Mono'; font-size:0.78rem; padding:7px 13px; background:#fff; border:1px solid var(--line); border-radius:6px; color:var(--muted);}
 
