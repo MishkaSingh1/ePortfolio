@@ -275,6 +275,21 @@ footer p{color:var(--muted); max-width:480px; margin:0 auto 34px;}
   border:1px solid var(--line); padding:14px 24px; border-radius:8px; transition:all .2s;
 }
 .contact-item:hover{border-color:var(--copper); color:var(--copper);}
+
+.contact-form{max-width:680px; margin:0 auto 60px; text-align:left;}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+.contact-form input, .contact-form textarea{
+  width:100%; border:1px solid var(--line); background:#fff; border-radius:8px;
+  padding:14px 16px; margin-bottom:16px; font-family:'Inter'; font-size:0.95rem; color:var(--text);
+}
+.contact-form textarea{resize:vertical; min-height:150px;}
+.contact-form input:focus, .contact-form textarea:focus{outline:none; border-color:var(--copper);}
+.contact-form ::placeholder{color:var(--muted-2);}
+.btn-send{
+  width:100%; padding:16px; background:var(--text); color:#fff; border:none; border-radius:8px;
+  font-family:'JetBrains Mono'; font-size:0.9rem; letter-spacing:0.05em; cursor:pointer; transition:background .2s;
+}
+.btn-send:hover{background:var(--copper);}
 .foot-fine{font-family:'JetBrains Mono'; font-size:0.75rem; color:var(--muted-2);}
 .site-footer-links{display:flex; gap:24px; justify-content:center; margin-bottom:20px; font-family:'JetBrains Mono'; font-size:0.8rem;}
 .site-footer-links a{text-decoration:none; color:var(--muted);}
@@ -287,6 +302,7 @@ footer p{color:var(--muted); max-width:480px; margin:0 auto 34px;}
   .edu-grid{grid-template-columns:1fr;}
   .skills-wrap{grid-template-columns:1fr;}
   .project-row{grid-template-columns:1fr; gap:16px;}
+  .form-row{grid-template-columns:1fr;}
   .quicklinks{grid-template-columns:1fr 1fr;}
   .exp-list{padding-left:28px;}
   .exp-row::before{left:-28px;}

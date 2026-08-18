@@ -57,4 +57,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var autoplay = setInterval(function () { goTo(index + 1); }, 6000);
     carousel.addEventListener('mouseenter', function () { clearInterval(autoplay); });
   });
+
+  // Contact form: no backend on this static site, so hand the message
+  // off to the visitor's own email client via a pre-filled mailto: link.
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = contactForm.name.value.trim();
+      var email = contactForm.email.value.trim();
+      var subject = contactForm.subject.value.trim() || 'Portfolio contact form';
+      var message = contactForm.message.value.trim();
+
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      var mailto = 'mailto:mishkasingh117@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+  }
 });
