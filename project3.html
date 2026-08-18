@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Op-Amp Audio Circuit — Mishka Singh</title>
+<title>Lead Compensator Circuit — Mishka Singh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/logo.png">
@@ -26,8 +26,8 @@
 
 <main>
   <div class="page-head">
-    <h1 class="page-title">Op-Amp Audio Circuit</h1>
-    <p class="page-sub">A hand-wired stripboard circuit built around op-amp ICs, prototyped and bench-tested driving a speaker.</p>
+    <h1 class="page-title">Lead Compensator Circuit</h1>
+    <p class="page-sub">An op-amp lead compensator, hand-built on veroboard, designed to control the altitude of a simulated quadcopter.</p>
   </div>
 
   <section style="padding-top:0;">
@@ -35,11 +35,13 @@
       <div class="spot-grid">
         <div>
           <h3>What it was</h3>
-          <p style="color:var(--muted);">An analog circuit built by hand on stripboard, wiring three 8-pin op-amp ICs and a trimmer potentiometer to shape and drive an audio signal into a speaker. I built it stage by stage, checking each section on the oscilloscope and bench power supply before wiring in the next, so a fault in one stage never got buried under the next.</p>
+          <p style="color:var(--muted);">For EEE3094S (Control Systems Engineering), I designed and built an analog lead compensator to replace a simple proportional controller in a simulated altitude-control loop for a quadcopter rig ("KittiCopter"). The proportional controller from the previous lab couldn't meet the tightened specs — under 20% overshoot and settling within 9 seconds while still tracking setpoints to within 0.4 m — so I designed a first-order compensator from a root-locus specification instead.</p>
+          <p style="color:var(--muted);">Working from the desired closed-loop pole location, I calculated the angle contribution needed from the compensator and placed its zero and pole geometrically on the root locus, arriving at C(s) = (1.46s + 1) / (0.231s + 1). I validated the design in Simulink before converting the transfer function into resistor and capacitor values and wiring the circuit by hand on veroboard using OP07 op-amps.</p>
           <ul class="detail-list">
-            <li>Hand-wired the circuit on stripboard around three op-amp stages and a trimmer pot.</li>
-            <li>Verified each stage on the oscilloscope and bench power supply before adding the next.</li>
-            <li>Drove a speaker directly from the finished circuit to confirm the output.</li>
+            <li>Derived the compensator's pole/zero locations from settling-time and overshoot specs using root-locus angle criteria, then verified the design and gain in MATLAB/Simulink.</li>
+            <li>Converted the transfer function into component values (R1C1 = 1.46, R2C2 = 0.231) and hand-wired the op-amp stages on veroboard.</li>
+            <li>Added a small filtering resistor after testing revealed noise on the input reading, stabilising the live signal.</li>
+            <li>Bench-tested the built circuit against the KittiCopter simulator: setpoint tracking settled in 7 s and disturbance rejection in 5 s, both inside the 9 s spec, though overshoot came in at 30% against a 20% target — most likely from tolerance stack-up across the series resistor combinations.</li>
           </ul>
           <div style="margin-top:30px;">
             <a href="projects.html" class="btn btn-ghost">Back to projects</a>
@@ -47,9 +49,10 @@
         </div>
         <div class="spec-card">
           <div class="spec-title">At a glance</div>
+          <div class="row"><span>Course</span><b>EEE3094S</b></div>
           <div class="row"><span>Type</span><b>Individual</b></div>
-          <div class="row"><span>Tools</span><b>Oscilloscope, bench PSU</b></div>
-          <div class="row"><span>Build</span><b>Hand-wired stripboard</b></div>
+          <div class="row"><span>Tools</span><b>MATLAB, Simulink, oscilloscope, bench PSU</b></div>
+          <div class="row"><span>Build</span><b>Hand-wired veroboard, OP07 op-amps</b></div>
         </div>
       </div>
     </div>
@@ -57,8 +60,8 @@
     <div class="block">
       <div class="eyebrow">Gallery</div>
       <div class="mini-gallery">
-        <div class="carousel-img-wrap"><img class="carousel-img" src="assets/projects/3-a.jpg" alt="Bare stripboard circuit"></div>
-        <div class="carousel-img-wrap"><img class="carousel-img" src="assets/projects/3-b.jpg" alt="Bench-testing the circuit"></div>
+        <div class="carousel-img-wrap"><img class="carousel-img" src="assets/projects/3-a.jpg" alt="Lead compensator circuit on veroboard, close up"></div>
+        <div class="carousel-img-wrap"><img class="carousel-img" src="assets/projects/3-b.jpg" alt="Bench-testing the compensator circuit"></div>
       </div>
     </div>
   </section>

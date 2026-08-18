@@ -92,7 +92,13 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
 
 /* ---------- home / hero ---------- */
-#hero{padding-top:150px; padding-bottom:30px;}
+#hero{padding-top:150px; padding-bottom:30px; position:relative;}
+.hero-ombre{
+  position:absolute; top:0; left:0; z-index:-1; pointer-events:none;
+  width:min(40vw, 560px); height:min(32vh, 380px);
+  background:linear-gradient(200deg, var(--signal) 0%, var(--copper-bright) 32%, transparent 75%);
+  opacity:0.55;
+}
 .hero-kicker{font-family:'JetBrains Mono'; color:var(--copper); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;}
 .hero-headline{font-size:clamp(2.4rem, 6.2vw, 4.6rem); line-height:1.05; max-width:900px;}
 .hero-headline .accent{color:var(--copper);}
@@ -135,16 +141,6 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .bio-fact .v{font-family:'Fraunces'; font-size:1.08rem; color:var(--text);}
 .bio-fact .v .dim{display:block; font-family:'JetBrains Mono'; font-size:0.72rem; letter-spacing:0.03em; color:var(--muted-2); margin-top:3px;}
 .tools-label{display:block; font-family:'JetBrains Mono'; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--muted-2); margin-bottom:12px; padding-left:28px;}
-
-.quicklinks{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
-.qcard{
-  background:#fff; border:1px solid var(--line); border-radius:10px; padding:24px;
-  text-decoration:none; transition:all .2s; display:block;
-}
-.qcard:hover{border-color:var(--copper); transform:translateY(-3px); box-shadow:0 14px 30px rgba(30,40,35,0.06);}
-.qcard .qnum{font-family:'JetBrains Mono'; color:var(--muted-2); font-size:0.75rem;}
-.qcard h4{font-size:1.05rem; margin:10px 0 8px;}
-.qcard p{color:var(--muted); font-size:0.85rem;}
 
 /* ---------- projects ---------- */
 .project-list{display:flex; flex-direction:column;}
@@ -312,7 +308,6 @@ footer p{color:var(--muted); max-width:480px; margin:0 auto 34px;}
   .project-row{grid-template-columns:1fr; gap:16px;}
   .mini-gallery{grid-template-columns:1fr 1fr;}
   .form-row{grid-template-columns:1fr;}
-  .quicklinks{grid-template-columns:1fr 1fr;}
   .exp-list{padding-left:28px;}
   .exp-row::before{left:-28px;}
   .block, .spotlight{padding:30px 22px;}
