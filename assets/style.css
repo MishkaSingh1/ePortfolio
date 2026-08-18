@@ -95,10 +95,11 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 #hero{padding-top:150px; padding-bottom:30px; position:relative;}
 .hero-ombre{
   position:absolute; top:0; left:0; z-index:-1; pointer-events:none;
-  width:min(75vw, 1000px); height:min(30vh, 320px);
-  background:radial-gradient(ellipse 75% 75% at 0% 0%, var(--signal) 0%, var(--copper-bright) 20%, transparent 62%);
-  opacity:0.5;
+  width:min(40vw, 560px); height:min(32vh, 380px);
+  background:linear-gradient(200deg, var(--signal) 0%, var(--copper-bright) 32%, transparent 75%);
+  opacity:0.55;
 }
+.hero-ombre.wide{width:min(75vw, 1000px);}
 .hero-kicker{font-family:'JetBrains Mono'; color:var(--copper); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;}
 .hero-headline{font-size:clamp(2.4rem, 6.2vw, 4.6rem); line-height:1.05; max-width:900px;}
 .hero-headline .accent{color:var(--copper);}
