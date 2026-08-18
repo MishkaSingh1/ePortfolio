@@ -100,24 +100,29 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .hero-copy p{color:var(--muted); font-size:1.06rem; max-width:520px; margin-bottom:30px;}
 .hero-cta{display:flex; gap:16px; flex-wrap:wrap;}
 
-.photo-frame{
-  position:relative; border:1px solid var(--line); border-radius:16px; background:var(--panel);
-  padding:14px; max-width:340px;
-  box-shadow:0 20px 50px rgba(30,40,35,0.06);
+.profile-card{
+  background:var(--text); border-radius:20px; max-width:340px;
+  padding:44px 32px 38px; text-align:center;
+  box-shadow:0 24px 60px rgba(30,20,15,0.22);
 }
-.photo-frame .inner{
-  border-radius:10px; overflow:hidden; aspect-ratio:4/5; background:#efe0cc;
-  display:flex; align-items:center; justify-content:center; position:relative;
+.profile-photo{
+  position:relative; width:180px; height:180px; margin:0 auto 26px;
+  border-radius:50%; overflow:hidden; background:#4a3c34;
+  border:3px solid var(--copper);
+  display:flex; align-items:center; justify-content:center;
 }
-.photo-frame img{width:100%; height:100%; object-fit:cover; display:block;}
+.profile-photo img{width:100%; height:100%; object-fit:cover; display:block;}
 .photo-placeholder{
-  text-align:center; color:var(--muted-2); font-family:'JetBrains Mono'; font-size:0.82rem;
-  padding:30px; line-height:1.7;
+  text-align:center; color:#cbb7ab; font-family:'JetBrains Mono'; font-size:0.7rem;
+  padding:16px; line-height:1.6;
 }
-.photo-placeholder .icon{font-size:2rem; margin-bottom:14px; color:var(--muted-2);}
-.photo-frame .tag-corner{
-  position:absolute; bottom:-1px; right:14px; background:var(--copper); color:#fff;
-  font-family:'JetBrains Mono'; font-size:0.72rem; padding:6px 12px; border-radius:6px 6px 0 0;
+.photo-placeholder .icon{font-size:1.6rem; margin-bottom:8px; color:#cbb7ab;}
+.photo-placeholder b{color:#fbefe4;}
+.profile-name{color:#fbefe4; font-size:1.5rem; margin-bottom:16px;}
+.profile-rule{width:38px; height:2px; background:var(--copper); margin:0 auto 16px;}
+.profile-role{
+  font-family:'JetBrains Mono'; font-size:0.78rem; text-transform:uppercase;
+  letter-spacing:0.1em; color:#cbb7ab; line-height:1.7;
 }
 
 .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start; margin-top:10px;}
@@ -300,7 +305,7 @@ footer p{color:var(--muted); max-width:480px; margin:0 auto 34px;}
 
 @media (max-width:880px){
   .hero-lower, .about-grid, .strip-grid{grid-template-columns:1fr;}
-  .photo-frame{max-width:300px; margin-top:20px;}
+  .profile-card{max-width:300px; margin:20px auto 0;}
   .spot-grid{grid-template-columns:1fr;}
   .edu-grid{grid-template-columns:1fr;}
   .skills-wrap{grid-template-columns:1fr;}
