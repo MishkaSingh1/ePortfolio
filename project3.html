@@ -33,27 +33,18 @@
 
   <section style="padding-top:0;">
     <div class="spotlight">
-      <div class="spot-grid">
-        <div>
-          <h3>What it was</h3>
-          <p style="color:var(--muted);">For EEE3094S (Control Systems Engineering), I designed and built an analog lead compensator to replace a simple proportional controller in a simulated altitude-control loop for a quadcopter rig ("KittiCopter"). The proportional controller from the previous lab couldn't meet the tightened specs — under 20% overshoot and settling within 9 seconds while still tracking setpoints to within 0.4 m — so I designed a first-order compensator from a root-locus specification instead.</p>
-          <p style="color:var(--muted);">Working from the desired closed-loop pole location, I calculated the angle contribution needed from the compensator and placed its zero and pole geometrically on the root locus, arriving at C(s) = (1.46s + 1) / (0.231s + 1). I validated the design in Simulink before converting the transfer function into resistor and capacitor values and wiring the circuit by hand on veroboard using OP07 op-amps.</p>
-          <ul class="detail-list">
-            <li>Derived the compensator's pole/zero locations from settling-time and overshoot specs using root-locus angle criteria, then verified the design and gain in MATLAB/Simulink.</li>
-            <li>Converted the transfer function into component values (R1C1 = 1.46, R2C2 = 0.231) and hand-wired the op-amp stages on veroboard.</li>
-            <li>Added a small filtering resistor after testing revealed noise on the input reading, stabilising the live signal.</li>
-            <li>Bench-tested the built circuit against the KittiCopter simulator: setpoint tracking settled in 7 s and disturbance rejection in 5 s, both inside the 9 s spec, though overshoot came in at 30% against a 20% target — most likely from tolerance stack-up across the series resistor combinations.</li>
-          </ul>
-          <div style="margin-top:30px;">
-            <a href="projects.html" class="btn btn-ghost">Back to projects</a>
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="info-title">At a glance</div>
-          <div class="info-fact"><span class="k">Course</span><span class="v">EEE3094S</span></div>
-          <div class="info-fact"><span class="k">Type</span><span class="v">Individual</span></div>
-          <div class="info-fact"><span class="k">Tools</span><span class="v">MATLAB, Simulink, oscilloscope, bench PSU</span></div>
-          <div class="info-fact"><span class="k">Build</span><span class="v">Hand-wired veroboard, OP07 op-amps</span></div>
+      <div>
+        <h3>What it was</h3>
+        <p style="color:var(--muted);">For EEE3094S (Control Systems Engineering), I designed and built an analog circuit to control the altitude of a simulated quadcopter rig ("KittiCopter"). A simple proportional controller from an earlier lab wasn't good enough to meet the settling-time and overshoot targets, so I designed a lead compensator instead, using root-locus analysis to work out where its pole and zero needed to go.</p>
+        <p style="color:var(--muted);">Once I had the compensator's transfer function, I converted it into resistor and capacitor values and hand-wired the circuit on veroboard using OP07 op-amps.</p>
+        <ul class="detail-list">
+          <li>Designed the compensator using root-locus analysis, then checked the design in MATLAB/Simulink.</li>
+          <li>Converted the transfer function into resistor and capacitor values and hand-wired the op-amp circuit on veroboard.</li>
+          <li>Added a small filtering resistor after testing picked up noise on the input signal.</li>
+          <li>Bench-tested the circuit against the KittiCopter simulator — it settled faster than required, though overshoot ran a bit higher than target, most likely from resistor tolerances.</li>
+        </ul>
+        <div style="margin-top:30px;">
+          <a href="projects.html" class="btn btn-ghost">Back to projects</a>
         </div>
       </div>
     </div>
