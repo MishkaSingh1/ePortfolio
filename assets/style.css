@@ -263,7 +263,7 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .tier-group{margin-bottom:20px;}
 .tier-group:last-child{margin-bottom:0;}
 .tier-label{display:block; font-family:'JetBrains Mono'; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-2); margin-bottom:10px;}
-.chip-core{border-color:var(--copper); color:var(--text); font-weight:500;}
+.chip.chip-core{border-color:var(--copper); color:var(--text); font-weight:500;}
 .chip-wrap{display:flex; flex-wrap:wrap; gap:9px;}
 .chip{font-family:'JetBrains Mono'; font-size:0.78rem; padding:7px 13px; background:#fff; border:1px solid var(--line); border-radius:6px; color:var(--muted);}
 
