@@ -300,7 +300,7 @@ footer p{color:var(--muted); max-width:480px; margin:0 auto 34px;}
   font-family:'JetBrains Mono'; font-size:0.9rem; letter-spacing:0.05em; cursor:pointer; transition:background .2s;
 }
 .btn-send:hover{background:var(--copper);}
-.foot-fine{font-family:'Fraunces'; font-size:0.85rem; color:var(--muted-2);}
+.foot-fine{font-family:'Fraunces'; font-size:0.85rem; color:#fff;}
 .site-footer-links{display:flex; gap:24px; justify-content:center; margin-bottom:20px; font-family:'Fraunces'; font-size:0.95rem;}
 .site-footer-links a{text-decoration:none; color:var(--muted);}
 .site-footer-links a:hover{color:var(--copper);}
