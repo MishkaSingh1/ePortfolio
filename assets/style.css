@@ -260,10 +260,20 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .skills-wrap{display:grid; grid-template-columns:1fr 1fr 1fr; gap:26px; margin-top:20px;}
 .skill-col h4{font-family:'JetBrains Mono'; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--copper); margin-bottom:20px;}
 .skill-col:not(:first-child){border-left:1px solid var(--line); padding-left:26px;}
-.tier-group{margin-bottom:20px;}
+.tier-group{margin-bottom:24px;}
 .tier-group:last-child{margin-bottom:0;}
-.tier-label{display:block; font-family:'JetBrains Mono'; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-2); margin-bottom:10px;}
+.tier-label{display:block; font-family:'JetBrains Mono'; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-2); margin-bottom:14px;}
 .chip.chip-core{border-color:var(--copper); color:var(--text); font-weight:500;}
+.skill-rings{display:flex; gap:22px;}
+.skill-ring-item{display:flex; flex-direction:column; align-items:center; text-align:center; width:70px;}
+.ring-badge{position:relative; width:58px; height:58px; display:flex; align-items:center; justify-content:center;}
+.ring-arc-svg{position:absolute; inset:0; width:100%; height:100%;}
+.ring-track{fill:none; stroke:var(--line); stroke-width:5;}
+.ring-arc{fill:none; stroke:url(#skillGradient); stroke-width:5; stroke-linecap:round;}
+.ring-badge.core .ring-arc{stroke-width:6;}
+.ring-badge:not(.core) .ring-arc{opacity:0.55;}
+.ring-icon{position:relative; z-index:1; display:flex; align-items:center; justify-content:center;}
+.ring-label{margin-top:9px; font-size:0.78rem; color:var(--muted); line-height:1.3;}
 .chip-wrap{display:flex; flex-wrap:wrap; gap:9px;}
 .chip{font-family:'JetBrains Mono'; font-size:0.78rem; padding:7px 13px; background:var(--bg); border:1px solid var(--line); border-radius:6px; color:var(--muted);}
 
