@@ -225,7 +225,7 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
 .exp-more{margin-top:18px;}
 .exp-more .btn{padding:9px 20px; font-size:0.85rem;}
-.tag{font-family:'JetBrains Mono'; font-size:0.72rem; padding:5px 11px; border:1px solid var(--line); border-radius:20px; color:var(--muted); background:#fff;}
+.tag{font-family:'JetBrains Mono'; font-size:0.72rem; padding:5px 11px; border:1px solid var(--line); border-radius:20px; color:var(--muted); background:var(--bg);}
 
 /* ---------- spotlight / artefact ---------- */
 .spotlight{
@@ -265,7 +265,7 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .tier-label{display:block; font-family:'JetBrains Mono'; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-2); margin-bottom:10px;}
 .chip.chip-core{border-color:var(--copper); color:var(--text); font-weight:500;}
 .chip-wrap{display:flex; flex-wrap:wrap; gap:9px;}
-.chip{font-family:'JetBrains Mono'; font-size:0.78rem; padding:7px 13px; background:#fff; border:1px solid var(--line); border-radius:6px; color:var(--muted);}
+.chip{font-family:'JetBrains Mono'; font-size:0.78rem; padding:7px 13px; background:var(--bg); border:1px solid var(--line); border-radius:6px; color:var(--muted);}
 
 /* ---------- activities / nature strip ---------- */
 .strip-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
