@@ -36,14 +36,15 @@
   <section style="padding-top:0;">
     <div class="spotlight">
       <div>
-        <h3>What it was</h3>
-        <p style="color:var(--muted);">For EEE3094S (Control Systems Engineering), I designed and built an analog circuit to control the altitude of a simulated quadcopter rig ("KittiCopter"). A simple proportional controller from an earlier lab wasn't good enough to meet the settling-time and overshoot targets, so I designed a lead compensator instead, using root-locus analysis to work out where its pole and zero needed to go.</p>
-        <p style="color:var(--muted);">Once I had the compensator's transfer function, I converted it into resistor and capacitor values and hand-wired the circuit on veroboard using OP07 op-amps.</p>
+        <h3>More about it</h3>
+        <p style="color:var(--muted);">For EEE3094S (Control Systems Engineering), I designed and built an analog circuit to control the altitude of a simulated quadcopter rig ("KittiCopter"). This project was an extension of a proportional controller from an earlier to ensure the system met the settling-time and overshoot targets.</p>
         <ul class="detail-list">
-          <li>Designed the compensator using root-locus analysis, then checked the design in MATLAB/Simulink.</li>
-          <li>Converted the transfer function into resistor and capacitor values and hand-wired the op-amp circuit on veroboard.</li>
+          <li>Designed the compensator using root-locus analysis to meet my indivdual system requirements.</li>
+          <li> Used Matlab to simulat the system to ensure the settling-time and overshoot targets were met with my design.</li>
+          <li>Converted the transfer function into resistor and capacitor values and designed the op-amp circuit.</li>
+          <li>Soldered the circuit onto veroboard, continuity checking as I went to ensure no short circuits.</li>
           <li>Added a small filtering resistor after testing picked up noise on the input signal.</li>
-          <li>Bench-tested the circuit against the KittiCopter simulator — it settled faster than required, though overshoot ran a bit higher than target, most likely from resistor tolerances.</li>
+          <li>Connected the circuit to the KittiCopter simulator - it settled faster than required and met the overshoot requirement.</li>
         </ul>
         <div style="margin-top:30px;">
           <a href="projects.html" class="btn btn-ghost">Back to projects</a>
