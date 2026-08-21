@@ -29,15 +29,15 @@
 <main>
   <div class="hero-ombre wide" aria-hidden="true"></div>
   <div class="page-head">
-    <h1 class="page-title">Maze-Solving Robot</h1>
-    <p class="page-sub">A small wheeled robot that finds its way through a physical maze on its own, using a state machine built in MATLAB/Simulink Stateflow.</p>
+    <h1 class="page-title">Maze-Solving Robot MicroMouse</h1>
+    <p class="page-sub">A small wheeled robot that finds its way through a physical maze using logic programmed in MATLAB/Simulink Stateflow.</p>
   </div>
 
   <section style="padding-top:0;">
     <div class="spotlight">
       <div>
         <h3>More about it</h3>
-        <p style="color:var(--muted);">The robot runs on a Stateflow state machine with states for straight motion, left/right turns, and reversing, switching between them based on wall-following sensor readings. I tested the logic in a MATLAB occupancy-grid simulation before running it on the physical robot in a maze built from MDF board and aluminium extrusion.</p>
+        <p style="color:var(--muted);">The robot runs on a Stateflow state machine with states for straight motion, left/right turns, and reversing, switching between them based on wall-following sensor readings. I tested the logic in a MATLAB maze simulation before running it on the physical robot in a maze.</p>
         <ul class="detail-list">
           <li>Physically assembled the MicroMouse by soldering all headers on the PCB boards and connecting them together.</li>
           <li>Designed the Stateflow logic which enables the robot to make decisions of its movements: <code style="font-family:'JetBrains Mono';">SET_VARIABLES</code>, <code style="font-family:'JetBrains Mono';">STRAIGHT_MOTION</code>, <code style="font-family:'JetBrains Mono';">LEFT_TURN</code>, <code style="font-family:'JetBrains Mono';">RIGHT_TURN</code> and <code style="font-family:'JetBrains Mono';">REVERSE_MOTION</code> states, with sensor thresholds driving the transitions.</li>
