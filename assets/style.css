@@ -242,7 +242,8 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .meta-line{font-family:'Inter'; font-size:0.82rem; color:var(--muted-2); margin-top:22px;}
 .info-card{border-left:2px solid var(--copper); padding-left:26px; display:flex; flex-direction:column; gap:18px;}
 .info-title{font-family:'Inter'; font-size:0.72rem; color:var(--signal); text-transform:uppercase; letter-spacing:0.06em;}
-.info-fact{display:flex; flex-direction:column; gap:3px;}
+.info-fact{position:relative; display:flex; flex-direction:column; gap:3px;}
+.info-fact::before{content:''; position:absolute; left:-32px; top:2px; width:13px; height:13px; border-radius:50%; background:var(--panel); border:2px solid var(--copper);}
 .info-fact .k{font-family:'Inter'; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--muted-2);}
 .info-fact .v{font-family:'Fraunces'; font-size:1.02rem; color:var(--text);}
 
