@@ -297,10 +297,10 @@ footer h2{font-size:2.4rem; margin-bottom:18px;}
 footer p{color:var(--muted); max-width:480px; margin:0 auto 34px;}
 .contact-row{display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:60px;}
 .contact-item{
-  font-family:'Agency FB', 'Inter', sans-serif; font-size:1rem; color:#fff; text-decoration:none; background:var(--copper);
-  border:1px solid var(--copper); padding:14px 24px; border-radius:8px; transition:all .2s;
+  font-family:'Agency FB', 'Inter', sans-serif; font-size:1rem; color:#fff; text-decoration:none; background:var(--text);
+  border:1px solid var(--text); padding:14px 24px; border-radius:8px; transition:all .2s;
 }
-.contact-item:hover{background:var(--copper-bright); border-color:var(--copper-bright);}
+.contact-item:hover{background:var(--copper); border-color:var(--copper);}
 
 .contact-form{max-width:680px; margin:0 auto 110px; text-align:left;}
 .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
