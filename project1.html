@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maze-Solving Robot — Mishka Singh</title>
+<title>Maze-Solving Robot, Mishka Singh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/logo.png">
@@ -40,7 +40,7 @@
         <p style="color:var(--muted);">The robot runs on a Stateflow state machine with states for straight motion, left/right turns, and reversing, switching between them based on wall-following sensor readings. I tested the logic in a MATLAB occupancy-grid simulation before running it on the physical robot in a maze built from MDF board and aluminium extrusion.</p>
         <ul class="detail-list">
           <li>Physically assembled the MicroMouse by soldering all headers on the PCB boards and connecting them together.</li>
-          <li>Designed the Stateflow logic which enables the robot to make decisions of its movements — <code style="font-family:'JetBrains Mono';">SET_VARIABLES</code>, <code style="font-family:'JetBrains Mono';">STRAIGHT_MOTION</code>, <code style="font-family:'JetBrains Mono';">LEFT_TURN</code>, <code style="font-family:'JetBrains Mono';">RIGHT_TURN</code> and <code style="font-family:'JetBrains Mono';">REVERSE_MOTION</code> states, with sensor thresholds driving the transitions.</li>
+          <li>Designed the Stateflow logic which enables the robot to make decisions of its movements: <code style="font-family:'JetBrains Mono';">SET_VARIABLES</code>, <code style="font-family:'JetBrains Mono';">STRAIGHT_MOTION</code>, <code style="font-family:'JetBrains Mono';">LEFT_TURN</code>, <code style="font-family:'JetBrains Mono';">RIGHT_TURN</code> and <code style="font-family:'JetBrains Mono';">REVERSE_MOTION</code> states, with sensor thresholds driving the transitions.</li>
           <li>Tested the robot using a MATLAB maze simulation.</li>
           <li>Ran the logic on the physical 4-wheel MicroMouse and tested in the real-life maze, changing the Stateflow logic as required.</li>
         </ul>
