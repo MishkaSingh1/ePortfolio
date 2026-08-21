@@ -159,7 +159,12 @@ section{padding:120px 5vw 90px; max-width:1200px; margin:0 auto;}
 .project-body h4{font-size:1.3rem; margin-bottom:8px; transition:color .2s;}
 .project-row:hover .project-body h4{color:var(--copper);}
 .project-body p{color:var(--muted); font-size:0.92rem; margin-bottom:12px; max-width:520px;}
-.project-see-more{font-family:'Agency FB', 'Inter', sans-serif; font-size:0.88rem; color:var(--copper);}
+.project-see-more{
+  font-family:'Agency FB', 'Inter', sans-serif; font-size:0.85rem; color:var(--text);
+  display:inline-flex; align-items:center; gap:6px; padding:9px 18px;
+  border:1px solid var(--line); border-radius:20px; background:#fff; transition:all .2s;
+}
+.project-row:hover .project-see-more{border-color:var(--copper); color:var(--copper);}
 .mini-gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px;}
 .mini-gallery .carousel-img-wrap{aspect-ratio:4/3; border-radius:10px;}
 
