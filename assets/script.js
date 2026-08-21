@@ -7,25 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Graceful fallback if profile.jpg hasn't been added yet
-  var photo = document.getElementById('profilePhoto');
-  var placeholder = document.getElementById('photoPlaceholder');
-  if (photo && placeholder) {
-    photo.addEventListener('error', function () {
-      photo.style.display = 'none';
-      placeholder.style.display = 'block';
-    });
-  }
-
-  // Gallery carousel: falls back to a placeholder per-slide if the image is missing
-  document.querySelectorAll('.carousel-img').forEach(function (img) {
-    img.addEventListener('error', function () {
-      img.style.display = 'none';
-      var ph = img.parentElement.querySelector('.carousel-placeholder');
-      if (ph) ph.style.display = 'flex';
-    });
-  });
-
   document.querySelectorAll('.carousel').forEach(function (carousel) {
     var track = carousel.querySelector('.carousel-track');
     var slides = carousel.querySelectorAll('.carousel-slide');
